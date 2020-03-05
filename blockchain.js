@@ -1,16 +1,33 @@
 const Block = require("./block");
 const _ = require("lodash");
 
-class Blockchain{
-    constructor(){
-        this.chain = [Block.genesis()];
+class Blockchain {
+  constructor() {
+    this.chain = [Block.genesis()];
+  }
+
+  addBlock(data) {
+    const block = Block.mineBlock(_.takeRight(this.chain)[0], data);
+    this.chain = _.concat(this.chain, block);
+    return block;
+  }
+
+  isValid(chain) {
+    if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis()))
+      return false;
+
+    for (let i = 1; i < chain.length; i++) {
+      const block = chain[i];
+      const lastBlock = chain[i - 1];
+      if (
+        block.lastHash !== lastBlock.hash ||
+        block.hash !== Block.blockHash(block)
+      )
+        return false;
     }
 
-    addBlock(data){
-        const block = Block.mineBlock(_.takeRight(this.chain), data);
-        this.chain = _.concat(this.chain, block);
-        return block;
-    }
+    return true;
+  }
 }
 
 module.exports = Blockchain;
