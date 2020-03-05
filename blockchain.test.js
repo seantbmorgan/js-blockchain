@@ -5,12 +5,10 @@ const _ = require("lodash");
 describe("Blockchain", () => {
   let blockchain;
   let validBlockchain;
-  let invalidBlockchain;
 
   beforeEach(() => {
     blockchain = new Blockchain();
     validBlockchain = new Blockchain();
-    invalidBlockchain = new Blockchain();
   });
 
   it("Should start with genesis block.", () => {
