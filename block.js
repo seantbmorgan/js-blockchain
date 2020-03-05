@@ -18,7 +18,7 @@ class Block{
     }
 
     static genesis(){
-        return new this(Date.now(), '------', 'w31c0m3', []);
+        return new this('my-burfd4y', '------', 'w31c0m3', []);
     }
 
     static mineBlock(lastBlock, data){
