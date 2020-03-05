@@ -37,9 +37,7 @@ describe("Blockchain", () => {
   it("Should invalidate a chain with a corrupt block.", () => {
     const data = { lorem: "ipsum" };
     validBlockchain.addBlock(data);
-    console.log(1, validBlockchain.chain)
     validBlockchain.chain[1].data = { money: "al the..." };
-    console.log(2, validBlockchain.chain)
     expect(blockchain.isValid(validBlockchain.chain)).toBe(false);
   });
 });
