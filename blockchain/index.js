@@ -1,5 +1,4 @@
 const Block = require("./block");
-const winston = require("./winston");
 const _ = require("lodash");
 
 class Blockchain {
