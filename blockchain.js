@@ -1,4 +1,5 @@
 const Block = require("./block");
+const winston = require("./winston");
 const _ = require("lodash");
 
 class Blockchain {
@@ -27,6 +28,20 @@ class Blockchain {
     }
 
     return true;
+  }
+
+  replaceChain(newChain) {
+    if (newChain.length <= this.chain.length) {
+      console.error(
+        "New chain supplied was not long enough to replace current chain."
+      );
+      return;
+    } else if (!this.isValid(newChain)) {
+      console.error("New chain supplied was not valid.");
+      return;
+    }
+    console.log("Replacing blockchain with new chain.");
+    this.chain = newChain;
   }
 }
 
