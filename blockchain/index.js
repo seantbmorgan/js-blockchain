@@ -1,7 +1,6 @@
 const Block = require("./block");
+const winston = require("../winston");
 const _ = require("lodash");
-
-const winston = require("winston");
 
 class Blockchain {
   constructor() {
