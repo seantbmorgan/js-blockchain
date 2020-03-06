@@ -1,6 +1,16 @@
 const Block = require("./block");
 const _ = require("lodash");
 
+const winston = require("winston");
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    transports: [
+      new winston.transports.Console(),
+      new winston.transports.File({ filename: 'logfile.log' })
+    ]
+  });
+
 class Blockchain {
   constructor() {
     this.chain = [Block.genesis()];
@@ -31,15 +41,15 @@ class Blockchain {
 
   replaceChain(newChain) {
     if (newChain.length <= this.chain.length) {
-      console.error(
+      logger.error(
         "New chain supplied was not long enough to replace current chain."
       );
       return;
     } else if (!this.isValid(newChain)) {
-      console.error("New chain supplied was not valid.");
+      logger.error("New chain supplied was not valid.");
       return;
     }
-    console.log("Replacing blockchain with new chain.");
+    logger.info("Replacing blockchain with new chain.");
     this.chain = newChain;
   }
 }
