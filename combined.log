@@ -1,0 +1,10 @@
+{"message":"[STARTED] Blockchain application, listening on port 3001","level":"info","service":"user-service"}
+{"message":"New block added Block - \n            Timestamp: 1583453844757\n            Last Hash: w31c0m3\n            Hash: a03f6f47e6\n            data: [object Object]\n        ","level":"info","service":"user-service"}
+{"message":"New block added Block - \n            Timestamp: 1583453845738\n            Last Hash: a03f6f47e6\n            Hash: b0ff27175a\n            data: [object Object]\n        ","level":"info","service":"user-service"}
+{"message":"New block added Block - \n            Timestamp: 1583453846306\n            Last Hash: b0ff27175a\n            Hash: b69ed88ad2\n            data: [object Object]\n        ","level":"info","service":"user-service"}
+{"message":"New block added Block - \n            Timestamp: 1583453857219\n            Last Hash: b69ed88ad2\n            Hash: 218446ce33\n            data: [object Object]\n        ","level":"info","service":"user-service"}
+{"message":"New block added Block - \n            Timestamp: 1583453857754\n            Last Hash: 218446ce33\n            Hash: c792f25826\n            data: [object Object]\n        ","level":"info","service":"user-service"}
+{"message":"New block added Block - \n            Timestamp: 1583453858141\n            Last Hash: c792f25826\n            Hash: a3d658d65a\n            data: [object Object]\n        ","level":"info","service":"user-service"}
+{"message":"[STARTED] Blockchain application, listening on port 3001","level":"info","service":"user-service"}
+{"message":"New block added Block - \n            Timestamp: 1583453906420\n            Last Hash: w31c0m3\n            Hash: a6dd4292d3\n            data: [object Object]\n        ","level":"info","service":"user-service"}
+{"message":"New block added Block - \n            Timestamp: 1583453906728\n            Last Hash: a6dd4292d3\n            Hash: 992e5aeb53\n            data: [object Object]\n        ","level":"info","service":"user-service"}
