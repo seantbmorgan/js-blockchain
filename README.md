@@ -1,6 +1,6 @@
 # js-blockchain
 
-js-blockchain is a simple express application skeleton wrapping a blockchain
+A simple express application skeleton wrapping a blockchain
 
 ## Installation
 ```
