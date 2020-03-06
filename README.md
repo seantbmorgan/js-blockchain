@@ -5,7 +5,6 @@ js-blockchain is a simple express application skeleton wrapping a blockchain
 ## Installation
 ```
 $ npm install
-
 $ yarn 
 ```
 
