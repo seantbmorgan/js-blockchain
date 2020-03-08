@@ -1,2 +1,4 @@
 node_modules
 logfile.log
+error.log
+combined.log
