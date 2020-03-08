@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  chain-client-alpha:
+    image: stbmorgan/js-blockchain
+    network_mode: default
+    environment:
+      - HTTP_PORT=3001
+      - P2P_PORT=5001
+    expose:
+      - "5001"
+    ports:
+      - "3001:3001"
+
+  chain-client-bravo:
+    image: stbmorgan/js-blockchain
+    network_mode: default
+    environment:
+      - HTTP_PORT=3002
+      - P2P_PORT=5002
+      - PEERS=ws://localhost:5001
+    expose:
+      - "5002"
+    ports:
+      - "3002:3002"
+    depends_on: 
+      - chain-client-alpha
+
+
+
