@@ -13,9 +13,7 @@ class P2pServer {
   listen() {
     const server = new ws.Server({ port: P2P_PORT });
     server.on("connection", socket => this.connectSocket(socket));
-
     this.connectToPeers();
-
     winston.info(
       `[STARTED] WebSockets, listening for P2P connections on: ${P2P_PORT}`
     );
@@ -24,9 +22,7 @@ class P2pServer {
   connectSocket(socket) {
     this.sockets.push(socket);
     winston.info("Socket connected.");
-
     this.messageHandler(socket);
-
     this.sendChain(socket);
   }
 
@@ -41,7 +37,6 @@ class P2pServer {
     socket.on("message", message => {
       const data = JSON.parse(message);
       winston.info(`[MESSAGE] ${message}`);
-
       this.blockchain.replaceChain(data);
     });
   }
