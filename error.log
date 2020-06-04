@@ -24,3 +24,17 @@
 {"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
 {"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
 {"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"Amount 1000000 is greated than balance in senders wallet: Wallet - \n                PublicKey  : 045da59a866d59aa87c0cbc500cb0617ae6cdf3096ed176f6e95c97a82ee1e8aac2ae132df97cd098fc8a1d87084cc79e5dc1901f4e8d9f45324718072fbe0f31d\n                Balance    : 500\n            ","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"Amount 1000000 is greated than balance in senders wallet: Wallet - \n                PublicKey  : 04b969eb5dd9734b681ed989acab35ef6160f504cee37addbaeb227693cb46d162ee97045192729e4e037da16ee836d481e33585347ef536d9e53559094d12dd43\n                Balance    : 500\n            ","level":"error","service":"user-service"}
+{"message":"New chain supplied was not long enough to replace current chain.","level":"error","service":"user-service"}
+{"message":"Amount 1000000 is greated than balance in senders wallet: Wallet - \n                PublicKey  : 0451505db29daabff7376255a9728e78cd664d13657954ee9724cfeb54264cb1e544476a296811dcd477873ebb173f12548548bdc6157c25898eaad2dd2c91706c\n                Balance    : 500\n            ","level":"error","service":"user-service"}
