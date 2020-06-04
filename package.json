@@ -4,7 +4,8 @@
   "description": "A JavaScript Blockchain",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
     "dev-test": "nodemon index.js",
     "dev": "nodemon ./application",
     "serve": "node ./application"
