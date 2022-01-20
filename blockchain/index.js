@@ -1,6 +1,6 @@
-const Block = require("./block");
-const winston = require("../winston");
-const _ = require("lodash");
+const Block = require('./block');
+const winston = require('../winston');
+const _ = require('lodash');
 
 class Blockchain {
   constructor() {
@@ -14,8 +14,10 @@ class Blockchain {
   }
 
   isValid(chain) {
-    if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis()))
+    if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis())) {
+      winston.error('Non-Matching Genesis Blocks.');
       return false;
+    }
 
     for (let i = 1; i < chain.length; i++) {
       const block = chain[i];
@@ -23,8 +25,10 @@ class Blockchain {
       if (
         block.lastHash !== lastBlock.hash ||
         block.hash !== Block.blockHash(block)
-      )
+      ) {
+        winston.error('Block Hash Sequence Error.');
         return false;
+      }
     }
 
     return true;
@@ -33,14 +37,14 @@ class Blockchain {
   replaceChain(newChain) {
     if (newChain.length <= this.chain.length) {
       winston.error(
-        "New chain supplied was not long enough to replace current chain."
+        'New chain supplied was not long enough to replace current chain.'
       );
       return;
     } else if (!this.isValid(newChain)) {
-      winston.error("New chain supplied was not valid.");
+      winston.error('New chain supplied was not valid.');
       return;
     }
-    winston.info("Replacing blockchain with new chain.");
+    winston.info('Replacing blockchain with new chain.');
     this.chain = newChain;
   }
 }

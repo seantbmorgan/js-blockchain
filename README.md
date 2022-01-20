@@ -1,11 +1,12 @@
 # js-blockchain
 
-A simple express application skeleton wrapping a blockchain
+A simple ExpressJS application interfacing a blockchain. Utilizes web-scokets to deomnstrate synchonization between multiple clients/chains (basic distribute ledger).
 
 ## Installation
+
 ```
 $ npm install
-$ yarn 
+$ yarn
 ```
 
 ## Usage
@@ -16,33 +17,41 @@ $ yarn
 $ npm run test
 $ yarn test
 ```
-### Development  
+
+### Development
+
 ```
 $ npm run dev
 $ yarn dev
 ```
+
 Default HTTP_PORT = 3001
 Default P2P_PORT = 5001
 
 ### Additional Dev Instances
+
 ```
 $ $env:HTTP_PORT="xxxx"; $env:P2P_PORT="xxxx"; $env:PEERS="ws://localhost:xxxx,ws://localhost:xxxx..."; npm run dev;
 $ $env:HTTP_PORT="xxxx"; $env:P2P_PORT="xxxx"; $env:PEERS="ws://localhost:xxxx,ws://localhost:xxxx..."; yarn dev;
 ```
 
-### Run 
+### Run
 
 ```
 $ npm run serve
 $ yarn serve
 ```
 
+### Docker
 
+Deploy with
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+```
+$ docker-compose up
+```
 
-Please make sure to update tests as appropriate.
+\*will deploy two chains (alpha and bravo)
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)

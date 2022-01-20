@@ -1,5 +1,5 @@
-const SHA256 = require("crypto-js/sha256");
-const { DIFFICULTY, MINE_RATE } = require("../config");
+const SHA256 = require('crypto-js/sha256');
+const { DIFFICULTY, MINE_RATE } = require('../config');
 
 class Block {
   constructor(timestamp, lastHash, hash, data, nonce, difficulty) {
@@ -23,7 +23,7 @@ class Block {
   }
 
   static genesis() {
-    return new this("my-burfd4y", "------", "w31c0m3", [], 0, DIFFICULTY);
+    return new this('my-burfd4y', '------', 'w31c0m3', [], 0, DIFFICULTY);
   }
 
   static mineBlock(lastBlock, data) {
@@ -39,7 +39,7 @@ class Block {
       nonce++;
       difficulty = Block.adjustDifficulty(lastBlock, timestamp);
       hash = Block.hash(timestamp, lastHash, data, nonce, difficulty);
-    } while (hash.substring(0, difficulty) !== "0".repeat(difficulty));
+    } while (hash.substring(0, difficulty) !== '0'.repeat(difficulty));
 
     return new this(timestamp, lastHash, hash, data, nonce, difficulty);
   }
